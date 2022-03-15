@@ -1,9 +1,12 @@
-import './App.css';
-import axios from 'axios'
-import {useQuery} from 'react-query'
+import React from "react";
+import "./App.css";
+import axios from "axios";
+import { useQuery } from "react-query";
 
 async function fetchPosts() {
-  const { data } = await axios.get("https://randomuser.me/api/");
+  const { data } = await axios.get(
+    "http://universities.hipolabs.com/search?country=United+States"
+  );
   return data;
 }
 
@@ -19,10 +22,9 @@ function App() {
   return (
     <div className="App">
       <h1>Posts</h1>
-      {/* {data && data?.map((post, index) => {
+      {data.map((post, index) => {
         return <li key={index}>{post.title}</li>;
-      })} */}
-      <div>{data.results[0].name.first}</div>
+      })}
     </div>
   );
 }

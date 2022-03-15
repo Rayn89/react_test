@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# React testing repo
 
 This is a repo/project for React testing.
 Will be working with different Hooks, Props, APIs, etc..
