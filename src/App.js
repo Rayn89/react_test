@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Fragment>
-        <div>
+        <div className="navbar-cards">
           <NavBar />
           <Routes>
             <Route exact path="/cards" element={<CardFeed />} />

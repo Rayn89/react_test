@@ -10,7 +10,7 @@ import {
 function NavBar() {
 
   return (
-    <div className="App">
+    <div className="navbar">
       <ul>
             <li>
               <Link to="/">Home</Link>
