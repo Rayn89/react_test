@@ -19,7 +19,7 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/cards">Cards</Link>
             </li>
             <li>
               <Link to="/topics">Topics</Link>
@@ -27,7 +27,7 @@ function App() {
           </ul>
 
           <Routes>
-            <Route exact path="/" element={<CardFeed />} />
+            <Route exact path="/cards" element={<CardFeed />} />
           </Routes>
         </div>
       </Fragment>
