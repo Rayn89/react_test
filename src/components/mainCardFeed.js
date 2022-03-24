@@ -3,9 +3,9 @@ import { useQuery } from "react-query";
 import LazyLoad from "react-lazyload";
 import axios from "axios";
 import "../App.css";
-import pokemon from "pokemontcgsdk";
+// import pokemon from "pokemontcgsdk";
 
-pokemon.configure({ apiKey: process.env.REACT_APP_POKEMON_API_KEY });
+// pokemon.configure({ apiKey: process.env.REACT_APP_POKEMON_API_KEY });
 
 async function fetchPosts() {
   const { data } = await axios.get(
@@ -24,14 +24,6 @@ function CardFeed() {
   if (isError) {
     return <div>Error! {error.message}</div>;
   }
-
-//   pokemon.card
-//     .where({
-//       q: "nationalPokedexNumbers:[1 TO 151] set.series:base set.name:base ",
-//       orderBy: "name",
-//     })
-//     .then((result) => setPokemons(result.data));
-    console.log(data.data)
 
   return (
     <div className="App">

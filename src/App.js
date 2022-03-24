@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import React, {useEffect, useState, Fragment} from 'react'
 import CardFeed from './components/mainCardFeed'
+import NavBar from './components/navBar'
 
 function App() {
 
@@ -14,18 +15,7 @@ function App() {
     <Router>
       <Fragment>
         <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/cards">Cards</Link>
-            </li>
-            <li>
-              <Link to="/topics">Topics</Link>
-            </li>
-          </ul>
-
+          <NavBar />
           <Routes>
             <Route exact path="/cards" element={<CardFeed />} />
           </Routes>
